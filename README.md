@@ -1,4 +1,4 @@
-# Blog profesional — Alejandro Arévalo Sarce
+# Blog — Alejandro Arévalo Sarce
 
 Sitio web personal construido con [Quarto](https://quarto.org) y [R](https://www.r-project.org) en RStudio, publicado con GitHub Pages en **https://aarevalosarce.github.io**.
 
