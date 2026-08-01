@@ -1,8 +1,8 @@
 ---
-title: "La densidad de las 34 megatomas de Chile, en un solo gráfico"
-description: "Un gráfico de densidad de puntos (dot-density) construido en R con datos de TECHO-Chile y del estudio de Atisba sobre los megacampamentos del país: mismo territorio relativo, distinto hacinamiento."
+title: "La densidad de las 34 megatomas de Chile"
+description: "Asentamientos precarios y el control territorial"
 author: "Alejandro Arévalo Sarce"
-date: "2026-07-30"
+date: "2026-05-30"
 categories: [asentamientos informales, visualización de datos, R]
 image: megatomas_densidad_uniforme.png
 lang: es
@@ -33,12 +33,10 @@ El gráfico está hecho íntegramente en **R** con `ggplot2` y `ggforce`. La té
 
 Puedes descargar el script y ejecutarlo directamente; solo necesitas los paquetes `ggplot2`, `dplyr`, `tibble`, `purrr`, `ggforce` y `ragg`:
 
-<a class="btn-descarga" href="mega_densidad.R" download>⬇ Descargar script (mega_densidad.R)</a>
-<a class="btn-descarga" href="megatomas_densidad_uniforme.png" download>⬇ Descargar gráfico (PNG, 300 dpi)</a>
+<a class="btn-descarga" href="mega_densidad.R" download>⬇ Descargar script (mega_densidad.R)</a> <a class="btn-descarga" href="megatomas_densidad_uniforme.png" download>⬇ Descargar gráfico (PNG, 300 dpi)</a>
 
 ::: {.callout-note collapse="true" title="Ver el código completo"}
-
-```r
+``` r
 suppressPackageStartupMessages({
   library(ggplot2)
   library(dplyr)
@@ -48,9 +46,8 @@ suppressPackageStartupMessages({
   library(ragg)
 })
 
-# ═══════════════════════════════════════════════════════════════
 #  DATOS
-# ═══════════════════════════════════════════════════════════════
+
 tomas <- tibble(
   toma = c(
     "Los Laureles\nCerro Chuño", "Ajuyu",
@@ -101,11 +98,9 @@ tomas <- tibble(
   )
 )
 
-# ═══════════════════════════════════════════════════════════════
 #  CÁLCULOS
 #  Todos los círculos tienen el MISMO radio (R_FIXED).
 #  Los puntos dentro codifican la densidad: 1 punto = SCALE hab/ha
-# ═══════════════════════════════════════════════════════════════
 R_FIXED  <- 3.8    # radio idéntico para todas las tomas
 SPACING  <- 10.8   # separación entre centros
 N_COLS   <- 5
@@ -123,9 +118,7 @@ tomas <- tomas %>%
     cy  = -(idx %/% N_COLS) * SPACING
   )
 
-# ═══════════════════════════════════════════════════════════════
 #  PUNTOS - rejection sampling uniforme
-# ═══════════════════════════════════════════════════════════════
 set.seed(2026)
 
 pts_circulo <- function(n, cx, cy, r, shrink = 0.91) {
@@ -150,9 +143,7 @@ dots <- map_dfr(seq_len(nrow(tomas)), function(i) {
   df
 })
 
-# ═══════════════════════════════════════════════════════════════
 #  PALETA
-# ═══════════════════════════════════════════════════════════════
 BG_COLOR    <- "#C9E8F5"
 CIRCLE_FILL <- "#FEF6E4"
 CIRCLE_EDGE <- "#A8C8DC"
@@ -161,9 +152,7 @@ TITLE_COLOR <- "#0D2B3E"
 SUB_COLOR   <- "#2E6E8E"
 META_COLOR  <- "#5A8DA8"
 
-# ═══════════════════════════════════════════════════════════════
 #  GRÁFICO
-# ═══════════════════════════════════════════════════════════════
 p <- ggplot() +
   geom_circle(
     data = tomas,
@@ -233,7 +222,6 @@ agg_png("megatomas_densidad_uniforme.png",
 print(p)
 invisible(dev.off())
 ```
-
 :::
 
 ## Nota metodológica
