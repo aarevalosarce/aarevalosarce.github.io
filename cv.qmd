@@ -13,7 +13,7 @@ Profesional con 25 años de experiencia en el sistema penitenciario, ejerciendo 
 ## Formación académica
 
 | Año | Programa | Institución |
-|-----------------|------------------------|-------------------------------|
+|----|----|----|
 | 2023 | Magíster en Criminología y Gestión de la Seguridad Ciudadana | Facultad de Gobierno, Universidad de Chile |
 | 2013 | Strategic Implications of Human Rights and the Rule of Law (becado por la National Defense University, Washington D.C.) | William J. Perry Center for Hemispheric Defense Studies |
 | 2012 | Diploma en Introducción al Derecho Internacional de los Derechos Humanos | Facultad de Derecho, Universidad de Chile |
