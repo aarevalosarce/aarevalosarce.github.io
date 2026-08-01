@@ -214,9 +214,7 @@ p <- ggplot() +
     caption  = "Fuente: Oficina de Urbanismo Atisba, datos 2025  |  Las Últimas Noticias, 15 abr 2026"
   )
 
-# ═══════════════════════════════════════════════════════════════
 #  EXPORTAR - carta portrait 8,5 x 11" @ 300 dpi
-# ═══════════════════════════════════════════════════════════════
 agg_png("megatomas_densidad_uniforme.png",
         width = 2550, height = 3300, res = 300, bg = BG_COLOR)
 print(p)
