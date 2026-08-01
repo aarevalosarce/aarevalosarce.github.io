@@ -1,0 +1,9 @@
+---
+title: "Welcome (borrador de la plantilla)"
+draft: true
+---
+
+Este post de ejemplo venía con la plantilla de Quarto y está marcado como
+borrador (`draft: true`), por lo que **no aparece en el blog publicado**.
+
+Puedes eliminar esta carpeta (`posts/welcome/`) cuando quieras.

@@ -1,0 +1,45 @@
+---
+title: "Alejandro Arévalo Sarce"
+subtitle: "Violencia carcelaria · Programas de intervención · Sistemas penitenciarios · Crimen organizado transnacional"
+image: profile.png
+toc: false
+about:
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alejanosi/
+    - icon: twitter-x
+      text: X
+      href: https://x.com/Alejanosi
+    - icon: github
+      text: GitHub
+      href: https://github.com/aarevalosarce
+    - icon: envelope
+      text: Correo
+      href: mailto:aarevalosarce@gmail.com
+    - icon: person-badge
+      text: ORCID
+      href: https://orcid.org/0009-0005-3399-1458
+---
+
+Administrador Público de la Universidad de Chile, con **25 años de experiencia en el sistema penitenciario chileno**, ejercuiendo roles de liderazgo en políticas públicas y gestión en distintos ámbitos de Gendarmería. Fui Subdirector de Reinserción Social de Gendarmería de Chile y en 2012 lideré la creación de la Unidad de Protección y Promoción de Derechos Humanos de la institución.
+
+Mi investigación se centra en la **violencia carcelaria, programas de intervención, la gobernanza de las cárceles y el crimen organizado transnacional**. En 2024 obtuve el primer lugar del [Concurso de Investigación de ANEPE](https://anepe.cl/ganador-del-concurso-de-investigacion-2024/) con un estudio sobre la gobernanza criminal del Tren de Aragua en la región de Tarapacá.
+
+Soy profesor del curso *Tendencias del crimen organizado en la región* en el Magíster en Seguridad, Defensa y Relaciones Internacionales de ANEPE, y utilizo **R** para análisis estadístico de datos de criminalidad y seguridad, análisis que comparto en este blog.
+
+## Formación
+
+- **Magíster en Criminología y Gestión de la Seguridad Ciudadana**, Universidad de Chile (2023)
+- **Magíster en Seguridad y Defensa**, ANEPE (2008)
+- **Strategic Implications of Human Rights and the Rule of Law**, William J. Perry Center, National Defense University, Washington D.C. (2013)
+- **Administrador Público**, Universidad de Chile (1999)
+
+## Destacado
+
+- [Ganador Concurso de Investigación ANEPE 2024](https://anepe.cl/ganador-del-concurso-de-investigacion-2024/)
+- Capítulo en [*Crisis carcelaria y de seguridad* (Ediciones UC, 2025)](https://ebooks.ediciones.uc.cl/library/publication/crisis-carcelaria-y-de-seguridad-propuestas-para-una-politica-penitenciaria-integral-1762519497)
+- [Alumni Spotlight, William J. Perry Center](https://wjpcenter.org/wjpc-news/alejandro-arevalo-chile/)

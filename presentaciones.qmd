@@ -1,0 +1,26 @@
+---
+title: "Presentaciones"
+subtitle: "Ponencias y presentaciones en congresos y encuentros académicos"
+toc: true
+---
+
+## Tren de Aragua: desde los muros de la cárcel a las fronteras transnacionales
+
+**XVI Encuentro de la Sociedad Chilena de Políticas Públicas, 14 de enero de 2025**
+
+Presentación de la investigación ganadora del Concurso de Investigación ANEPE 2024 sobre el impacto del Tren de Aragua en la región de Tarapacá: tipo de movilidad de la organización criminal (según la tipología de Varese), Índice de Gobernanza Ilegal (i-Gov) aplicado en la región, y recomendaciones de cooperación interinstitucional.
+
+<a class="btn-descarga" href="files/tren-de-aragua-tarapaca-presentacion-2025.pdf" download>⬇ Descargar presentación (PDF)</a>
+<a class="btn-descarga" href="https://www.sociedadpoliticaspublicas.cl/wp-content/uploads/2025/01/Criminalidad_Alejandro-Arevalo.pdf">Ver en Sociedad Chilena de Políticas Públicas</a>
+
+<iframe class="visor-pdf" src="files/tren-de-aragua-tarapaca-presentacion-2025.pdf"></iframe>
+
+---
+
+## Vivencias de internos y funcionarios en torno a la violencia carcelaria en Colina II
+
+**III Congreso de la Sociedad Chilena de Criminología, 2023**
+
+Ponencia basada en entrevistas y grupos focales con internos y funcionarios del Centro de Cumplimiento Penitenciario Colina II. En los relatos se problematiza, como elemento central de la manifestación de la violencia, la interacción con los funcionarios, con implicancias directas para la gobernanza de las cárceles.
+
+El estudio dio origen al artículo publicado en la *Revista Estado, Gobierno y Gestión Pública* ([ver en Publicaciones](publicaciones.qmd)).

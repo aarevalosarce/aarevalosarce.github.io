@@ -1,0 +1,9 @@
+# Opciones que aplican a todos los posts de esta carpeta
+
+# Congelar resultados computacionales: solo se re-ejecuta el código R
+# cuando el archivo fuente cambia
+# (ver https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: auto
+
+# Autor por defecto de los posts
+author: "Alejandro Arévalo Sarce"

@@ -1,0 +1,64 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "posts/"
+    - "!GUIA_PUBLICACION.md"
+
+lang: es
+
+website:
+  title: "Alejandro Arévalo Sarce"
+  description: "Blog profesional de Alejandro Arévalo Sarce: políticas penitenciarias, criminología, crimen organizado y seguridad"
+  site-url: https://aarevalosarce.github.io
+  favicon: profile.png
+  navbar:
+    pinned: true
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Análisis con R"
+        href: analisis.qmd
+      - text: "Publicaciones"
+        href: publicaciones.qmd
+      - text: "Presentaciones"
+        href: presentaciones.qmd
+      - text: "CV"
+        href: cv.qmd
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alejanosi/
+        aria-label: LinkedIn
+      - icon: twitter-x
+        href: https://x.com/Alejanosi
+        aria-label: X
+      - icon: github
+        href: https://github.com/aarevalosarce
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:aarevalosarce@gmail.com
+        aria-label: Correo
+  page-footer:
+    left: "© 2026 Alejandro Arévalo Sarce"
+    center: "Hecho con [Quarto](https://quarto.org) y [R](https://www.r-project.org)"
+    right:
+      - icon: github
+        href: https://github.com/aarevalosarce
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    toc-title: "Contenido"
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    author-meta: "Alejandro Arévalo Sarce"
+
+execute:
+  freeze: auto
+
+editor: visual

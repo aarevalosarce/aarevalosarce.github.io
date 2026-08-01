@@ -1,0 +1,99 @@
+---
+title: "Publicaciones"
+subtitle: "Libros, artículos académicos e investigaciones"
+toc: true
+---
+
+## Libros y capítulos
+
+::: {.pub-entry}
+[2025]{.pub-year}
+
+[Prisión masculina y políticas penitenciarias]{.pub-title}
+
+[En H. Larraín (ed.), *Crisis carcelaria y de seguridad: propuestas para una política penitenciaria integral* (pp. 151–189). Ediciones UC.]{.pub-venue}
+
+El capítulo examina el impacto de las políticas penitenciarias sobre la población masculina privada de libertad en Chile, analizando cómo el predominio de hombres en las cárceles y los factores que moldean su experiencia de encarcelamiento condicionan el diseño de una política penitenciaria integral.
+
+::: {.pub-links}
+[Ediciones UC (ebook)](https://ebooks.ediciones.uc.cl/library/publication/crisis-carcelaria-y-de-seguridad-propuestas-para-una-politica-penitenciaria-integral-1762519497) [JSTOR](https://www.jstor.org/stable/jj.37972923)
+:::
+:::
+
+## Investigaciones
+
+::: {.pub-entry}
+[2024]{.pub-year}
+
+[Las nuevas formas de amenazas a la seguridad en las regiones fronterizas: el caso del Tren de Aragua en la región de Tarapacá, implicancias para la Defensa]{.pub-title}
+
+[Investigación ganadora del Concurso de Investigación 2024 de la Academia Nacional de Estudios Políticos y Estratégicos (ANEPE).]{.pub-venue}
+
+Mediante Análisis Cualitativo Comparado (QCA), entrevistas a autoridades regionales y a miembros del Tren de Aragua privados de libertad, y la aplicación de un Índice de Gobernanza Ilegal (i-Gov) adaptado de Campana y Varese, el estudio analiza las causas, consecuencias y dinámicas de movilidad y gobernanza ilegal que la organización ha desarrollado en Tarapacá, y propone una respuesta cooperativa interinstitucional.
+
+::: {.pub-links}
+[Noticia ANEPE](https://anepe.cl/ganador-del-concurso-de-investigacion-2024/) [Alumni Spotlight, WJP Center](https://wjpcenter.org/wjpc-news/alejandro-arevalo-chile/)
+:::
+:::
+
+::: {.pub-entry}
+[2023]{.pub-year}
+
+[Violencia carcelaria interpersonal en el Centro de Cumplimiento Penitenciario de Colina II: diseño de una estrategia para disminuirla]{.pub-title}
+
+[Tesis de Magíster en Criminología y Gestión de la Seguridad Ciudadana, Universidad de Chile.]{.pub-venue}
+
+::: {.pub-links}
+[Descargar PDF](files/tesis-violencia-carcelaria-colina-ii-2023.pdf)
+:::
+:::
+
+## Artículos en revistas
+
+::: {.pub-entry}
+[2023]{.pub-year}
+
+[Implicancias de la violencia para la gobernanza carcelaria: estudio de caso en el Centro de Cumplimiento Penitenciario Colina II]{.pub-title}
+
+[*Revista Estado, Gobierno y Gestión Pública*, Vol. 21, N.º 41. Universidad de Chile.]{.pub-venue}
+
+Analiza la violencia en Colina II, una de las cárceles más violentas del país, a partir de las vivencias de internos y del poder que ejercen los funcionarios. Con entrevistas individuales y grupos focales analizados mediante Teoría Fundamentada, concluye que intervenir la violencia exige recuperar la legitimidad de la administración penitenciaria y mejorar la gobernanza carcelaria.
+
+::: {.pub-links}
+[Revista EGGP](https://revistaeggp.uchile.cl/) [Descargar PDF](files/implicancias-violencia-gobernanza-carcelaria-2023.pdf)
+:::
+:::
+
+::: {.pub-entry}
+[2023]{.pub-year}
+
+[Aproximaciones teóricas para una explicación de la violencia carcelaria interpersonal: un debate pendiente en el sistema penitenciario chileno]{.pub-title}
+
+[*Revista de Estudios de la Justicia*, N.º 39, segundo semestre. Universidad de Chile.]{.pub-venue}
+
+::: {.pub-links}
+[Revista de Estudios de la Justicia](https://rej.uchile.cl/)
+:::
+:::
+
+::: {.pub-entry}
+[2018]{.pub-year}
+
+[Impacto de la Reforma Procesal Penal en el sistema penitenciario]{.pub-title}
+
+[*Revista 93*, Defensoría Penal Pública, agosto de 2018.]{.pub-venue}
+
+::: {.pub-links}
+[Defensoría Penal Pública](http://www.dpp.cl/)
+:::
+:::
+
+## Ponencias
+
+::: {.pub-entry}
+[2023]{.pub-year}
+
+[Vivencias de los internos y funcionarios penitenciarios en torno a la violencia carcelaria en Colina II: implicancias para la gobernanza de las cárceles]{.pub-title}
+
+[III Congreso de la Sociedad Chilena de Criminología.]{.pub-venue}
+:::

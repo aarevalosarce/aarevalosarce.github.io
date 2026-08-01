@@ -1,0 +1,47 @@
+---
+title: "Curriculum Vitae"
+subtitle: "Alejandro Arévalo Sarce, Administrador Público de la Universidad de Chile"
+toc: true
+---
+
+<a class="btn-descarga" href="files/CV_Alejandro-Arevalo-Sarce_2026.pdf" download>⬇ Descargar CV completo (PDF)</a>
+
+## Perfil
+
+Profesional con 25 años de experiencia en el sistema penitenciario, ejerciendo roles de liderazgo en políticas públicas y gestión en distintos ámbitos de Gendarmería. En 2012 participé en la creación y puesta en marcha de la Unidad de Protección y Promoción de Derechos Humanos de Gendarmería de Chile. Ha conducido diversas jefaturas departamentales y el cargo directivo de Subdirector de Reinserción Social de Gendarmería.
+
+## Formación académica
+
+| Año | Programa | Institución |
+|-----------------|------------------------|-------------------------------|
+| 2023 | Magíster en Criminología y Gestión de la Seguridad Ciudadana | Facultad de Gobierno, Universidad de Chile |
+| 2013 | Strategic Implications of Human Rights and the Rule of Law (becado por la National Defense University, Washington D.C.) | William J. Perry Center for Hemispheric Defense Studies |
+| 2012 | Diploma en Introducción al Derecho Internacional de los Derechos Humanos | Facultad de Derecho, Universidad de Chile |
+| 2008 | Magíster en Seguridad y Defensa | Academia Nacional de Estudios Políticos y Estratégicos (ANEPE) |
+| 1999 | Administrador Público, Administración Pública y Gestión de Gobierno | Universidad de Chile |
+
+## Experiencia profesional
+
+**Encargado, Unidad de Participación Ciudadana y Transparencia**, Gendarmería de Chile *(actual)* Propone al Director Nacional las modalidades de participación de las organizaciones de la sociedad civil y vela por el cumplimiento del principio de transparencia de la función pública (Ley N.º 20.285).
+
+**Encargado, Unidad de Investigación e Innovación**, Escuela de Gendarmería de Chile Planificación, evaluación y coordinación de políticas y proyectos de investigación e innovación en materias penitenciarias, de seguridad y reinserción social.
+
+**Subdirector de Reinserción Social**, Gendarmería de Chile Cargo directivo de conducción nacional de la política de reinserción social.
+
+**Fundador y jefe, Unidad de Protección y Promoción de Derechos Humanos**, Gendarmería de Chile (2012) Lideró la creación y puesta en marcha de la primera unidad institucional de derechos humanos del servicio.
+
+## Actividades académicas
+
+**Profesor, "Tendencias del crimen organizado en la región"** *(2023–2026)* Magíster en Seguridad, Defensa y Relaciones Internacionales de ANEPE. Perspectiva comparada de las tendencias de la criminalidad organizada en la región y evidencia sobre las intervenciones estatales.
+
+**Ganador del Concurso de Investigación ANEPE 2024** *"Las nuevas formas de amenazas a la seguridad en las regiones fronterizas: el caso del Tren de Aragua en la región de Tarapacá, implicancias para la Defensa".*
+
+## Herramientas
+
+- Lenguaje **R** para análisis estadísticos y **ATLAS.ti** para datos cualitativos
+- Desarrollo de aplicaciones web interactivas con **R + Shiny**
+- Levantamiento y rediseño de procesos con **BPMN**
+
+## Contacto
+
+📧 [aarevalosarce\@gmail.com](mailto:aarevalosarce@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/alejanosi/) · 𝕏 [\@Alejanosi](https://x.com/Alejanosi) · 🌐 [github.com/aarevalosarce](https://github.com/aarevalosarce) · ORCID [0009-0005-3399-1458](https://orcid.org/0009-0005-3399-1458)

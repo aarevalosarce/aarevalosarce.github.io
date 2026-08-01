@@ -1,0 +1,184 @@
+/*-- scss:defaults --*/
+
+// ——— Estilo inspirado en quarto.org: celestes y azules sobre fondo claro ———
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap');
+
+$font-family-sans-serif: "Source Sans 3", -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+$headings-font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+// ——— Paleta (colores de quarto.org) ———
+$primary: #447099;          // azul acero Quarto
+$secondary: #6a737b;
+$body-bg: #f2f8fc;          // celeste muy claro, tipo quarto.org
+$body-color: #24292f;
+$link-color: #39729E;       // azul de enlaces de quarto.org
+$navbar-bg: #ffffff;        // barra clara, como quarto.org
+$navbar-fg: #3d4c5a;
+$footer-bg: #447099;
+$footer-fg: #e6eef5;
+$code-color: #7a2e2e;
+$code-bg: #e7f0f7;          // fondo de código, un paso más oscuro que el celeste base
+
+$headings-font-weight: 600;
+$toc-color: #4a5a6a;
+
+/*-- scss:rules --*/
+
+h1, h2, h3 {
+  color: #305f84;
+  letter-spacing: -0.01em;
+}
+
+h1.title {
+  font-weight: 700;
+}
+
+.navbar {
+  border-bottom: 3px solid #75AADB;   // filete celeste Quarto
+  box-shadow: 0 1px 4px rgba(20, 56, 92, 0.06);
+}
+
+.navbar-brand {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #305f84 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #39729E !important;
+}
+
+// Subtítulos y metadatos
+.subtitle, .quarto-title .description {
+  color: #6a737b;
+  font-size: 1.05rem;
+}
+
+// Tarjetas del listing de análisis
+div.quarto-post {
+  border-bottom: 1px solid #dbe7f1;
+  padding-bottom: 1.1em;
+}
+
+div.quarto-post .listing-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+div.quarto-post .listing-categories .listing-category {
+  border-color: #75AADB;
+  color: #447099;
+}
+
+// Bloques de cita
+blockquote {
+  border-left: 4px solid #75AADB;
+  background: #e4eff8;
+  padding: 0.6em 1em;
+  color: #43505c;
+}
+
+// Publicaciones: entradas tipo referencia
+.pub-entry {
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+  border-left: 3px solid #cfe0ef;
+}
+
+.pub-entry:hover {
+  border-left-color: #75AADB;
+}
+
+.pub-year {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  color: #447099;
+  font-size: 0.95em;
+}
+
+.pub-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  color: #305f84;
+  margin: 0.1em 0;
+}
+
+.pub-venue {
+  font-style: italic;
+  color: #6a737b;
+  font-size: 0.98em;
+}
+
+.pub-links {
+  margin-top: 0.35em;
+  font-size: 0.92em;
+}
+
+.pub-links a {
+  display: inline-block;
+  margin-right: 0.7em;
+  padding: 0.12em 0.6em;
+  border: 1px solid #b9cfe2;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #39729E;
+}
+
+.pub-links a:hover {
+  background: #447099;
+  color: #fff;
+  border-color: #447099;
+}
+
+// Botón de descarga destacado
+.btn-descarga {
+  display: inline-block;
+  background: #447099;
+  color: #fff !important;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0.4em 0.4em 0.4em 0;
+}
+
+.btn-descarga:hover {
+  background: #75AADB;
+  color: #14385c !important;
+}
+
+// Visor PDF embebido
+.visor-pdf {
+  width: 100%;
+  height: 640px;
+  border: 1px solid #cfe0ef;
+  border-radius: 4px;
+}
+
+// Página "about" (inicio)
+div.quarto-about-trestles .about-entity .about-link {
+  border-color: #75AADB;
+  color: #305f84;
+}
+
+div.quarto-about-trestles .about-entity .about-link:hover {
+  background-color: #447099;
+  color: #fff;
+}
+
+.about-image {
+  border: 4px solid #dcebf7;
+}
+
+// Tablas sobrias
+table.table {
+  font-size: 0.95em;
+}
+
+thead {
+  border-bottom: 2px solid #447099;
+}

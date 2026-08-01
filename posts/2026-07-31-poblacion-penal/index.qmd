@@ -1,0 +1,170 @@
+---
+title: "El giro del encarcelamiento en Chile: una mirada a los datos (2022–2024)"
+description: "Tras una década de caída sostenida, la población penal chilena creció con una velocidad inédita. Un primer análisis reproducible en R con datos públicos de Gendarmería de Chile."
+author: "Alejandro Arévalo Sarce"
+date: "2026-07-31"
+categories: [sistema penitenciario, R, datos públicos]
+draft: true
+lang: es
+format:
+  html:
+    code-fold: true
+    code-summary: "Ver código R"
+    fig-width: 8.5
+    fig-height: 5
+execute:
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+---
+
+Chile vive un punto de inflexión penitenciario. Después de una década en que la población penal se mantuvo estable o a la baja, entre 2022 y 2024 el sistema cerrado creció a un ritmo cercano a **mil personas privadas de libertad adicionales por mes**, mientras la capacidad de plazas del sistema permaneció prácticamente congelada en torno a las 41.000. El resultado es conocido por quienes trabajamos en el sistema: hacinamiento, presión sobre la gobernanza de los penales y condiciones que, como he sostenido en mi [investigación sobre violencia carcelaria](../../publicaciones.qmd), terminan filtrándose desde los muros de la cárcel hacia los barrios.
+
+En este primer análisis del blog reviso esa trayectoria con datos públicos reportados por Gendarmería de Chile, usando **R** y código totalmente reproducible (puedes desplegarlo en cada figura).
+
+## Preparación de los datos
+
+```{r}
+#| code-summary: "Ver código R: datos y tema gráfico"
+library(ggplot2)
+library(dplyr)
+library(scales)
+
+# Paleta del sitio
+azul  <- "#447099"
+dorado <- "#5b8fbf"   # celeste para líneas de referencia
+papel <- "#f2f8fc"
+tinta_suave <- "#5b6b7a"
+
+tema_blog <- function() {
+  theme_minimal(base_size = 13) +
+    theme(
+      plot.background = element_rect(fill = papel, color = NA),
+      panel.background = element_rect(fill = papel, color = NA),
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_line(color = "#e4ebf1", linewidth = 0.4),
+      plot.title = element_text(face = "bold", color = azul, size = 15),
+      plot.subtitle = element_text(color = tinta_suave, size = 11),
+      plot.caption = element_text(color = tinta_suave, size = 8.5, hjust = 0),
+      axis.title = element_text(color = tinta_suave, size = 10),
+      axis.text = element_text(color = tinta_suave)
+    )
+}
+
+# Población penal, sistema cerrado (Gendarmería de Chile,
+# según reportes recogidos por prensa; ver fuentes al pie)
+poblacion <- tribble(
+  ~fecha,        ~personas,
+  "2022-04-01",  46647,
+  "2022-12-01",  49214,
+  "2023-01-01",  49846,
+  "2023-06-01",  53600,
+  "2023-12-01",  55922,
+  "2024-01-01",  56579,
+  "2024-02-01",  56926,
+  "2024-03-01",  57872,
+  "2024-10-01",  59411
+) |>
+  mutate(fecha = as.Date(fecha))
+
+plazas <- 41000  # capacidad de diseño aprox. del sistema, estable por una década
+
+# Etiquetas de mes en español (independiente del locale del sistema)
+meses_es <- c("ene", "feb", "mar", "abr", "may", "jun",
+              "jul", "ago", "sep", "oct", "nov", "dic")
+etiqueta_mes <- function(x) {
+  paste0(meses_es[as.integer(format(x, "%m"))], "\n", format(x, "%Y"))
+}
+```
+
+## Una curva que cambió de pendiente
+
+```{r}
+#| label: fig-evolucion
+#| fig-cap: "Población penal en régimen cerrado, abril 2022 – octubre 2024. La línea segmentada indica la capacidad aproximada de plazas del sistema."
+ggplot(poblacion, aes(x = fecha, y = personas)) +
+  list(
+    geom_hline(yintercept = plazas, linetype = "42", color = dorado,
+               linewidth = 0.7),
+    annotate("text", x = as.Date("2022-04-15"), y = plazas - 1400,
+             label = "Capacidad aprox. del sistema: 41.000 plazas",
+             color = dorado, hjust = 0, size = 3.4, fontface = "italic"),
+    geom_line(color = azul, linewidth = 1),
+    geom_point(color = azul, fill = papel, shape = 21,
+               size = 2.8, stroke = 1.1),
+    annotate("text", x = as.Date("2024-10-01"), y = 59411 - 2500,
+             label = "59.411", color = azul, fontface = "bold", size = 3.6),
+    annotate("text", x = as.Date("2022-04-01"), y = 46647 + 2300,
+             label = "46.647", color = azul, fontface = "bold",
+             size = 3.6, hjust = 0),
+    scale_x_date(breaks = poblacion$fecha[c(1, 2, 4, 5, 9)],
+                 labels = etiqueta_mes),
+    scale_y_continuous(labels = label_number(big.mark = "."),
+                       limits = c(38000, 62000)),
+    labs(
+      title = "La población penal creció 27% en dos años y medio",
+      subtitle = "Personas privadas de libertad en régimen cerrado, Chile",
+      x = NULL, y = "Personas privadas de libertad",
+      caption = "Fuente: Gendarmería de Chile, según reportes de Emol (abr. 2024) y BioBioChile (nov. 2024).\nElaboración: Alejandro Arévalo Sarce."
+    ),
+    tema_blog()
+  )
+```
+
+Tres lecturas rápidas de la figura:
+
+En primer lugar, la **magnitud**: entre abril de 2022 y octubre de 2024 el sistema cerrado pasó de 46.647 a 59.411 personas, un aumento de 27,4% en apenas 30 meses. Para dimensionarlo: el sistema absorbió en dos años y medio el equivalente a más de diez cárceles medianas completas.
+
+En segundo lugar, la **brecha con la capacidad**: las plazas disponibles se han mantenido en torno a 41.000 durante aproximadamente una década. En marzo de 2024 la ocupación ya superaba la capacidad en cerca de 41%, y la brecha siguió ampliándose.
+
+En tercer lugar, la **composición procesal**: a octubre de 2024, un 36,1% de las personas recluidas (21.442) estaba en calidad de imputada, es decir, en prisión preventiva a la espera de juicio, lo que añade una capa de complejidad jurídica y de gestión al fenómeno.
+
+## ¿Quiénes son los extranjeros privados de libertad?
+
+La discusión pública suele vincular el alza del encarcelamiento con la migración y el crimen organizado transnacional, un vínculo que he estudiado para el caso del [Tren de Aragua en Tarapacá](../../publicaciones.qmd). Los datos permiten precisar la magnitud: a octubre de 2024, los extranjeros eran 8.983 personas, un **15,1% de la población penal**.
+
+```{r}
+#| label: fig-nacionalidad
+#| fig-cap: "Personas extranjeras privadas de libertad según nacionalidad, octubre de 2024."
+#| fig-height: 4
+extranjeros <- tribble(
+  ~pais,        ~personas,
+  "Colombia",    2529,
+  "Venezuela",   2449,
+  "Bolivia",     2187,
+  "Perú",         940,
+  "Otros países", 878
+) |>
+  mutate(pais = factor(pais, levels = rev(pais)))
+
+ggplot(extranjeros, aes(x = personas, y = pais)) +
+  list(
+    geom_col(fill = azul, width = 0.62),
+    geom_text(aes(label = label_number(big.mark = ".")(personas)),
+              hjust = -0.15, color = azul, size = 3.6, fontface = "bold"),
+    scale_x_continuous(limits = c(0, 2900), expand = expansion(c(0, 0.02))),
+    labs(
+      title = "Tres países concentran el 80% de los extranjeros",
+      subtitle = "Extranjeros privados de libertad por nacionalidad, octubre 2024 (total: 8.983)",
+      x = "Personas privadas de libertad", y = NULL,
+      caption = "Fuente: Gendarmería de Chile, según BioBioChile (nov. 2024). Elaboración: Alejandro Arévalo Sarce."
+    ),
+    tema_blog() + theme(panel.grid.major.y = element_blank())
+  )
+```
+
+Colombia, Venezuela y Bolivia concentran cerca del 80% de los extranjeros recluidos. Con todo, conviene mantener la proporción en perspectiva: **el 84,9% de la población penal es chilena**. El desafío del crimen organizado transnacional es real (y sus formas de gobernanza ilegal en regiones fronterizas son quizás la amenaza más seria que enfrenta el Estado), pero el grueso de la crisis penitenciaria sigue siendo un fenómeno de política criminal interna.
+
+## Lo que viene
+
+Este es el primero de una serie de análisis con datos públicos del sistema penitenciario y de seguridad. En próximas entradas: la serie larga de encarcelamiento (2010–2025) a partir de los compendios estadísticos de Gendarmería, indicadores de hacinamiento por establecimiento, y una exploración de los datos de violencia carcelaria que motivaron mi tesis de magíster.
+
+Si te interesa replicar o extender estos análisis, todo el código está disponible desplegando los bloques "Ver código R" y en el [repositorio del blog](https://github.com/aarevalosarce).
+
+## Fuentes
+
+- Gendarmería de Chile, [Compendios estadísticos penitenciarios](https://www.gendarmeria.gob.cl/est_general.html)
+- BioBioChile (18-11-2024), [*Radiografía al preso en Chile: las estadísticas oficiales de los privados de libertad de Gendarmería*](https://www.biobiochile.cl/noticias/servicios/explicado/2024/11/18/radiografia-al-preso-en-chile-las-estadisticas-oficiales-de-los-privados-de-libertad-de-gendarmeria.shtml)
+- Emol (19-04-2024), [*Sobrepoblación penal: las cifras del aumento de la ocupación carcelaria*](https://www.emol.com/noticias/Nacional/2024/04/19/1128392/cifras-carceles-reclusos-chile.html)
